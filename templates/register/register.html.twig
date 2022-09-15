@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RegisterController!{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Inscription</h1>
+    
+    <div class="container mx-auto">
+        {% if notification %}
+            <div class="badge bg-danger text-light  my-4" style="width: 500px;">
+                {{ notification }}
+            </div>
+        {% endif %}
+    </div>
+
+    {{ form_start(form) }}
+        {{ form_widget(form, { 'attr': {'class': 'form-horizontal'} }) }}
+    {{ form_end(form) }}
+    
+{% endblock %}
