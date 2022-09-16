@@ -30,7 +30,6 @@ class RegisterController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            //dd($form->get('confirm_password')->getData());
             /* $password = $form->get('password')->getData();
             $confirm_password = $form->get('confirm_password')->getData();
 
